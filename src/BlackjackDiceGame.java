@@ -69,12 +69,14 @@ public class BlackjackDiceGame {
 
                 if (machineTotalSum > userTotalSum) {
                     System.out.println("Machine win!");
-                    System.out.println("You got: " + userTotalSum);
-                    System.out.println("Machine got: " + machineTotalSum); }
+                    System.out.println("You got: " +userTotalSum);
+                    System.out.println("Machine got: " +machineTotalSum); }
 
                 //Tjek om spilleren og maskinen har fået det samme
                 if (userTotalSum == machineTotalSum) {
-                    System.out.println("Draw! You both got the same sum"); }
+                    System.out.println("It's a draw!");
+                    System.out.println("You got: "+userTotalSum);
+                    System.out.println("Machine got: "+machineTotalSum); }
                 keepPlaying = false;
             } else {
                 System.out.println("Invalid input! Please type 'y' or 'n'.");
