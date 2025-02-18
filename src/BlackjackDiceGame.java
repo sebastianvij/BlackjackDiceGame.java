@@ -61,22 +61,21 @@ public class BlackjackDiceGame {
                     System.out.println("Machine exceeded 21! You win.");
                     keepPlaying = false; }
 
-                //Tjek om spilleren og maskinen har fået det samme
-                if (userTotalSum == machineTotalSum) {
-                    System.out.println("Draw! You both got the same sum");
-                    keepPlaying = false; }
-
             } else if (userInput.equalsIgnoreCase("n")) {
                 if (userTotalSum > machineTotalSum) {
-                System.out.println("You win!");
-                System.out.println("You got: "+userTotalSum);
-                System.out.println("Machine got: "+machineTotalSum);
-            } else {
-                System.out.println("Machine win!");
-                System.out.println("You got: " + userTotalSum);
-                System.out.println("Machine got: " + machineTotalSum);
-            }
-            keepPlaying = false;
+                    System.out.println("You win!");
+                    System.out.println("You got: "+userTotalSum);
+                    System.out.println("Machine got: "+machineTotalSum); }
+
+                if (machineTotalSum > userTotalSum) {
+                    System.out.println("Machine win!");
+                    System.out.println("You got: " + userTotalSum);
+                    System.out.println("Machine got: " + machineTotalSum); }
+
+                //Tjek om spilleren og maskinen har fået det samme
+                if (userTotalSum == machineTotalSum) {
+                    System.out.println("Draw! You both got the same sum"); }
+                keepPlaying = false;
             } else {
                 System.out.println("Invalid input! Please type 'y' or 'n'.");
             }
